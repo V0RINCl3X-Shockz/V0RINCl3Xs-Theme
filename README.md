@@ -1,4 +1,4 @@
-# V0RINCl3Xs-Theme
+# V0RINCl3Xs-Theme - Shell Shockers
 Have Fun ;)
 Shell Shockers Theme
 Theme

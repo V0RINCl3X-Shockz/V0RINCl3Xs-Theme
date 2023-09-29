@@ -1,0 +1,424 @@
+// ==UserScript==
+// @name         V0RINCL3X Theme (created by: V0RINCL3X)
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  V0RINCL3X Shell Shockers Theme Concept came designed by V0RINCl3X
+// @author       V0RINCl3X
+// @match        *://shellshock.io/*
+// @match        *://algebra.best/*
+// @match        *://algebra.vip/*
+// @match        *://biologyclass.club/*
+// @match        *://deadlyegg.com/*
+// @match        *://deathegg.world/*
+// @match        *://eggcombat.com/*
+// @match        *://egg.dance/*
+// @match        *://eggfacts.fun/*
+// @match        *://egghead.institute/*
+// @match        *://eggisthenewblack.com/*
+// @match        *://eggsarecool.com/*
+// @match        *://geometry.best/*
+// @match        *://geometry.monster/*
+// @match        *://geometry.pw/*
+// @match        *://geometry.report/*
+// @match        *://hardboiled.life/*
+// @match        *://hardshell.life/*
+// @match        *://humanorganising.org/*
+// @match        *://mathdrills.info/*
+// @match        *://mathfun.rocks/*
+// @match        *://mathgames.world/*
+// @match        *://math.international/*
+// @match        *://mathlete.fun/*
+// @match        *://mathlete.pro/*
+// @match        *://overeasy.club/*
+// @match        *://scrambled.best/*
+// @match        *://scrambled.tech/*
+// @match        *://scrambled.today/*
+// @match        *://scrambled.us/*
+// @match        *://scrambled.world/*
+// @match        *://shellshockers.club/*
+// @match        *://shellshockers.site/*
+// @match        *://shellshockers.us/*
+// @match        *://shellshockers.world/*
+// @match        *://softboiled.club/*
+// @match        *://violentegg.club/*
+// @match        *://violentegg.fun/*
+// @match        *://yolk.best/*
+// @match        *://yolk.life/*
+// @match        *://yolk.rocks/*
+// @match        *://yolk.tech/*
+// @match        *://zygote.cafe/*
+// @icon         https://cdn.discordapp.com/attachments/1125357738164240485/1157087339730960425/V0RINCl3X_Logo_Circle.png
+// @grant        none
+// ==/UserScript==
+
+(function () {
+    const addScript = () => {
+        document.title="V0RINCL3X"
+        document.head.innerHTML += `<style>
+* {
+	--ss-transparent: #00000000;
+	--ss-black: #000;
+	--ss-white: #E5E2DC; /*White Text*/
+	--ss-offwhite: #E5E2DC;
+	--ss-yellow0:#F7FFC1;
+	--ss-yellow: #FAF179;
+	--ss-yolk0: #f1c59a;
+	--ss-yolk: #0af5da; /*Green Select Buttons*/
+	--ss-yolk2: #d97611;
+	--ss-red0: #e29092;
+	--ss-red: #d15354;
+	--ss-red2: #801919;
+	--ss-red-bright: #EF3C39;
+	--ss-pink: #EC008C;
+	--ss-pink1: #b9006e;
+	--ss-pink-light: #ff3aaf;
+	--ss-brown: #924e0c;
+	--ss-blue00: #0088FF;
+	--ss-blue0: #0088FF;
+	--ss-blue1: #0088FF; /*Blue Invert Select Buttons*/
+	--ss-blue2: #0088FF;
+	--ss-blue3: #2F2B22; /*Lighter Box Borders*/
+	--ss-blue4: #2F2B22; /*Blue Subtitles, Darker Box Borders*/
+	--ss-blue5: #2F2B22;
+	--ss-green0: #87ddbb;
+	--ss-green1: #17451b;
+	--ss-green2: #2F2B22;
+	--ss-orange1: #F79520;
+	--ss-vip-gold: linear-gradient(to right, #DEB768, #E5E2DC, #2F2B22, #DEB768, #2F2B22);
+	--ss-clear: rgba(255, 255, 255, 0);
+	--ss-blue2clear: rgba(94, 186, 217, 0);
+	--ss-shadow: rgba(0,0,0,0.4);
+	--ss-blueshadow: #0088FF;
+	--ss-darkoverlay: rgba(0, 0, 0, 0.8);
+	--ss-darkoverlay2: rgba(0, 0, 0, 0.2);
+	--ss-lightoverlay: url("https://cdn.discordapp.com/attachments/1112256027593822239/1156738176556216403/image.png"); /*Main Background*/
+	--ss-lightbackground: linear-gradient(var(--ss-blue1), var(--ss-blue2));
+	--ss-blueblend1: linear-gradient(#349ec1, #5fbad8); /*Some Box fill colors*/
+	--ss-scrollmask1: linear-gradient(var(--ss-blue2clear), var(--ss-blue2));
+	--ss-scrollmask2: linear-gradient(rgba(56, 158, 192, 0), #389EC0);
+	--ss-fieldbg: linear-gradient(#91CADB, #ffffff, #ffffff, #ffffff, #ffffff);
+	--ss-white-60: rgba(255,255,255,.6);
+	--ss-white-90: rgba(255,255,255,.9);
+
+	--ss-me-player-bg: rgba(247,149,32,.8);
+	--ss-them-blue-bg: rgba(0,66,87,.8);
+	--ss-them-blue-color: #5ebbd9;
+	--ss-them-red-bg:  rgb(133,0,0,.8);
+	--ss-them-red-color: #ff4145
+	--ss-me-red-bg: rgba(255,65,69,.8);
+	--ss-me-blue-bg: rgb(94,187,217,.8);
+}
+
+/* --------------------- Stuff ----------------*/
+
+#ss_background {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	/* background: var(--ss-lightoverlay) no-repeat center center fixed; */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+    background: var(--ss-lightoverlay) no-repeat fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+#progress-wrapper {
+	background: var(--ss-lightoverlay) no-repeat fixed; /*Modified: #progress-wrapper | Previously:'background: linear-gradient(#320A0A, #CF2727) !important;'*/
+	background-size: cover; /*Modified: #progress-wrapper | Previously:'Blank, added extra line'*/
+	background-position: center; /*Modified: #progress-wrapper | Previously:'Blank, added extra line'*/
+}
+
+#progress-container {
+	background: var(--ss-lightoverlay) no-repeat fixed; /*Modified: #progress-container | Previously:'background: linear-gradient(#320A0A, #CF2727) !important;'*/
+	background-size: cover; /*Modified: #progress-container | Previously:'Blank, added extra line'*/
+	background-position: center; /*Modified: #progress-container | Previously:'Blank, added extra line'*/
+}
+
+/* ----------------------------------------------------------------- LoadingScreen -- */
+
+.load_screen {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	position: absolute;
+	top: 0; left: 0;
+	z-index: 20;
+	width: 100%; height: 100%;
+	background-image: var(--ss-lightoverlay); /*Modified: .load_screen | Previously:'background-image: var(--ss-lightoverlay);'*/
+	background-size: cover; /*Modified: .load_screen | Previously:'Blank, added extra line'*/
+	background-position: center; /*Modified: .load_screen | Previously:'Blank, added extra line'*/
+}
+
+.load_message {
+	color: #2F2B22; /*Modified: .load_message | Previously:'color: var(--ss-blue4);'*/
+	margin-top: 5em;
+	margin-bottom: 3.5em;
+}
+
+.pause-bg {
+	background: #09E845; /*Modified: .pause-bg | Previously:'background: var(--ss-lightoverlay) no-repeat;'*/
+	border: var(--ss-common-border-width) solid #0088FF; /*Modified: .pause-bg | Previously:'border: var(--ss-common-border-width) solid var(--ss-blue5);'*/
+	padding: var(--ss-space-lg) var(--ss-space-lg) 0;
+	text-align: center;
+}
+
+.popup_lg {
+	padding: var(--ss-space-xxl);
+	background: #09E845; /*Modified: .popup_lg | Previously:'Blank, added extra line'*/
+	border: var(--ss-common-border-width) solid #0088FF; /*Modified: .popup_lg | Previously:'Blank, added extra line'*/
+}
+
+.popup_sm {
+	min-width: 20em;
+	font-weight: bold;
+	background: #09E845; /*Modified: .popup_sm | Previously:'Blank, added extra line'*/
+	border: var(--ss-common-border-width) solid #0088FF; /*Modified: .popup_sm | Previously:'Blank, added extra line'*/
+}
+
+/* ----------------------------------------------------------------- Footer -- */
+
+#gameDescription {
+	min-width: 70em;
+	padding: 1em 10em;
+	background: var(--ss-lightoverlay) no-repeat center center fixed; /*Modified: #gameDescription | Previously:'background: var(--ss-lightoverlay) no-repeat center center fixed;'*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+    color: #00DD42; /*Modified: #gameDescription | Previously:'Blank, added extra line'*/
+}
+
+#gameDescription a {
+    color: #0088FF;
+}
+
+#ammo {
+	text-align: right;
+	font-size: 3.25em;
+	font-family: 'Nunito', sans-serif;
+	font-weight: bold;
+	line-height: 1em;
+	margin: 0;
+
+	padding-right: 1.2em;
+	padding-top: 0em;
+	margin-bottom: 0.1em;
+
+	background-image: url('https://cdn.discordapp.com/attachments/1125357738164240485/1132540079953428611/image1.png');
+    background-position: right center;
+	background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#healthContainer {
+	position: absolute;
+	left: 50%; bottom: 1em;
+	transform: translateX(-50%);
+	display: inline-block;
+	width: 6em; height: 6em;
+	background: var(--ss-blueshadow);
+	border-radius: 50%;
+	text-align: center;
+}
+
+#health {
+}
+
+#healthHp {
+	font-family: 'Nunito', bold italic;
+    font-weight: bold;
+    color: var(--ss-green);
+    font-size: 1.2em;
+    transform: translateY(-3.45em);
+}
+
+.healthBar {
+	transform-origin: center;
+	transform: rotate(90deg);
+	fill: #00933;
+	stroke: #0a6601;
+	stroke-width: 1em;
+	stroke-dasharray: 14.4513em;
+	transition: all 0.3s ease-in-out;
+}
+
+.healthYolk {
+	fill: #009933;
+}
+
+.healthSvg {
+	width: 100%; height: 100%;
+}
+
+.crosshair.normal {
+	left: calc(50% - 0.15em);
+	background: linear-gradient(#010101, #0088FF, #00DD42); /*Modified: .crosshair.normal | Previously:'background: white;'*/
+	width: 0.3em;
+}
+
+#maskmiddle {
+	background: url('https://cdn.discordapp.com/attachments/1125357738164240485/1156912632503214170/V0RINCl3X_-_MaskMiddle.png') center center no-repeat;
+	background-size: contain;
+    width: 100vh;
+	height: 100vh;
+}
+
+#best_streak_container h1 {
+    margin: 0; padding: 0;
+    display: inline;
+
+    text-shadow: var(--ss-space-micro) var(--ss-space-micro) var(--ss-shadow);
+
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 2.5em !important;
+    color: #F79520 !important;
+    font-weight: bold !important;
+    text-transform: lowercase;
+
+    padding-left: 1.7em;
+    padding-top: 0em;
+
+    background-image: url('https://cdn.discordapp.com/attachments/1125357738164240485/1132541868140404826/DONE.png');
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.egg_icon {
+    height: 2em;
+   margin: var(--ss-space-micro) var(--ss-space-sm) 0 0;
+   content: url(https://cdn.discordapp.com/attachments/913499491687084072/1144194898342461461/wizardegg_render_suraimu-removebg-preview.png?ex=6515e9c9&is=65149849&hm=08282687955d268e8ef1e74abfee12f7e6ed3df3d81a414e540a1919de6366e3&)
+}
+
+.egg_count {
+    width: auto;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #F79520;
+}
+
+#killBox::before{
+  font-size: 1.4em;
+  font-weight: 900;
+  content: 'ㅤㅤ💚 You Devoured 💚'!important;
+  color: #09E845;
+  background-image: url('https://cdn.discordapp.com/attachments/1125357738164240485/1132225397384298577/image.png');
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  }
+#killBox h3{
+  display:none;
+}
+#KILL_STREAK::before{
+  display: normal !important;
+}
+#deathBox h3{
+  display:none;
+}
+
+#deathBox::before{
+  font-size: 1.4em;
+  font-weight: 900;
+  content: 'ㅤㅤ💚 You Were Exiled By 💚'!important;
+  color: #09E845;
+  background-image: url('https://cdn.discordapp.com/attachments/1125357738164240485/1132225397384298577/image.png');
+  background-position: left center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bg_blue6 {
+    background-color: #000000 !important;
+}
+
+.stat-wrapper .stat:nth-child(even) > div {
+    background-color:#000000;
+}
+
+.btn_toggleoff {
+    color: #E5E2DC !important;
+    text-shadow: none !important;
+}
+
+.btn_blue_light, .btn-selected {
+    background-color: #0088FF;
+    border-color: #2F2B22;
+}
+
+#chatIn {
+    display: none;
+    color: #00e01a;
+    bottom: 1em;
+    left: 1em;
+    width: 100%;
+    border: none;
+    background: none;
+}
+
+#inGameUI .title {
+    font-size: .8em;
+    color: #ffffff;
+}
+
+#inGameUI {
+    position: absolute;
+    right: 0.5em;
+    top: 4em;
+    right: 1.5em;
+    top: 5em;
+    padding: 1em;
+    background-color: rgb(0 136 255);
+    border: var(--ss-common-border-width) solid #2F2B22;
+}
+
+.is-paused .pause-ui-element {
+	background-color: rgb(9 232 69);
+    border: var(--ss-common-border-width) solid #2F2B22;
+    bottom: 0;
+    width: var(--ss-chat-wrapper-width);
+    height: var(--ss--chat-height);
+}
+
+#readouts, #serverAndMapInfo {
+    display: block;
+    text-align: right;
+    color: #F79520;
+    font-weight: bold;
+    clear: both;
+    font-size: 1.3em !important;
+    text-transform: uppercase;
+    line-height: 1em;
+    white-space: nowrap;
+    z-index: 5;
+}
+
+.chat {
+    font-weight: bold;
+    color: #ffffff;
+    z-index: 5;
+}
+
+.chw-progress-bar-wrap-complete {
+	border-color: #2F2B22;
+}
+
+.chw-progress-bar-wrap-complete .chw-progress-bar-inner {
+    background: #0088FF;
+}
+
+.playerSlot-player-is-me {
+    background: rgb(32 162 138 / 80%);
+    background-image: url(https://background-tiles.com/overview/green/patterns/large/1055.png);
+    background-size: no-contain;
+    background-repeat: no-repeat;
+}
+</style>`
+    }
+    document.body ? addScript() : document.addEventListener("DOMContentLoaded", e => addScript());
+})();
